@@ -1,0 +1,9 @@
+services:
+  weather-api:
+    image: ghcr.io/biosimulytics-limited/dummy-weather-api:main
+    platform: linux/amd64
+    ports:
+      - "8080:8080"
+    mem_limit: 64m # Max memory allowed as container runs on limited hardware!
+    memswap_limit: 64m
+    restart: "always"
